@@ -9,6 +9,7 @@ body {
 
 .racecar {
   width: 10rem;
+  transition: transform 0.25s;
 }
 
 .left {
@@ -20,7 +21,7 @@ body {
 }
 
 .up {
-  transform: rotate(-90deg);
+  transform: rotate(270deg);
 }
 
 .down {
