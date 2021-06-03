@@ -10,6 +10,7 @@ body {
 .racecar {
   width: 10rem;
   transition: transform 0.25s;
+  position: absolute;
 }
 
 .left {

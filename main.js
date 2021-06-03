@@ -1,3 +1,8 @@
+var data = {
+  x: 0,
+  y: 0
+};
+
 var $racecar = document.querySelector('.racecar');
 
 window.addEventListener('keydown', handleMove);
@@ -11,5 +16,13 @@ function handleMove(event) {
     $racecar.className = 'racecar up';
   } else if (event.key === 'ArrowDown') {
     $racecar.className = 'racecar down';
+  } else if (event.key === ' ') {
+    setInterval(moveCar, 16);
   }
+}
+
+function moveCar() {
+  data.x += 10;
+  $racecar.style.left = data.x + 'px';
+  $racecar.style.top = data.y + 'px';
 }
