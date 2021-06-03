@@ -23,6 +23,6 @@ function handleMove(event) {
 
 function moveCar() {
   data.x += 10;
-  var position = 'top: ' + data.y + 'px; left: ' + data.x + 'px;';
-  $racecar.setAttribute('style', position);
+  $racecar.style.left = data.x + 'px';
+  $racecar.style.top = data.y + 'px';
 }
