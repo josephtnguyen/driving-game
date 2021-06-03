@@ -8,6 +8,10 @@ body {
   background-color: darkslategray;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .rounded {
   border-radius: 4px;
 }
@@ -50,7 +54,7 @@ body {
 
 .prompt-box {
   width: 600px;
-  height: 400px;
+  height: 350px;
   background-color: white;
 }
 
@@ -61,7 +65,7 @@ body {
 }
 
 .choice {
-  width: 30%;
+  width: 20%;
   object-fit: scale-down;
 }
 

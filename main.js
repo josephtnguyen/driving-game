@@ -6,9 +6,14 @@ var data = {
 };
 var carIsMoving = null;
 
-var $racecar = document.querySelector('.racecar');
+var $racecars = document.querySelectorAll('.racecar');
+var $racecar = null;
+
+var $choiceModal = document.querySelector('.choice-container');
+var $vehicles = document.querySelector('.vehicles');
 
 window.addEventListener('keydown', handleMove);
+$vehicles.addEventListener('click', handleChoice);
 
 function handleMove(event) {
   if (event.key === 'ArrowLeft') {
@@ -32,6 +37,20 @@ function handleMove(event) {
       data.moving = false;
     }
   }
+}
+
+function handleChoice(event) {
+  var id = event.target.id;
+
+  for (var i = 0; i < $racecars.length; i++) {
+    if ($racecars[i].classList.contains(id)) {
+      $racecars[i].classList.remove('hidden');
+      $racecar = $racecars[i];
+      break;
+    }
+  }
+
+  $choiceModal.classList.add('hidden');
 }
 
 function moveCar() {
