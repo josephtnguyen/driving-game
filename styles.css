@@ -10,3 +10,19 @@ body {
 .racecar {
   width: 10rem;
 }
+
+.left {
+  transform: rotate(180deg);
+}
+
+.right {
+  transform: rotate(0);
+}
+
+.up {
+  transform: rotate(-90deg);
+}
+
+.down {
+  transform: rotate(90deg);
+}
