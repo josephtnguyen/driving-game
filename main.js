@@ -35,7 +35,16 @@ function handleMove(event) {
 }
 
 function moveCar() {
-  data.x += 10;
+  if (data.direction === 'left') {
+    data.x -= 10;
+  } else if (data.direction === 'right') {
+    data.x += 10;
+  } else if (data.direction === 'up') {
+    data.y -= 10;
+  } else if (data.direction === 'down') {
+    data.y += 10;
+  }
+
   $racecar.style.left = data.x + 'px';
   $racecar.style.top = data.y + 'px';
 }
