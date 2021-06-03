@@ -22,7 +22,7 @@ function handleMove(event) {
 }
 
 function moveCar() {
-  data.x++;
+  data.x += 10;
   var position = 'top: ' + data.y + 'px; left: ' + data.x + 'px;';
   $racecar.setAttribute('style', position);
 }
